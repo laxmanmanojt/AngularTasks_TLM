@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-4" style="margin-top:10px">
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="leftHeading">Username</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" value="test" />
+                </div>
+            </div>
+            <div style="height:10px"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="leftHeading">Password</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" class="form-control" [(ngModel)]="pwdVal" />
+                </div>
+            </div>
+            <div style="height:10px"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="button" class="btn btn-primary" value="Login" (click)="funNavigatetoNotes();" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
