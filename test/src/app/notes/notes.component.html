@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="margin:10px">
+            <div class="row">
+                <div class="col-md-2">
+                    <label class="heading">Notes</label>
+                </div>
+                <div class="col-md-10 text-end">
+                    <input type="button" class="btn btn-default logoutClass" value="Logout"
+                        (click)="funNavigatetoLogin();" />
+                </div>
+            </div>
+            <hr class="horizontal-dotted" />
+            <div class="row" style="height:450px">
+                <div class="col-md-3 vertical-dotted">
+                    <div *ngFor="let n of ['a','b']">
+                        <div class="notes-section">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div>
+                                        <h2>{{n|uppercase}}</h2>
+                                    </div>
+                                    <div>{{n}}</div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="close-icon">x</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div>
+                        <label>Title: <span class="mandatory">*</span></label>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div style="height:10px"></div>
+                    <div>
+                        <label>Body: <span class="mandatory">*</span></label>
+                    </div>
+                    <div>
+                        <textarea class="col-12" rows="10"></textarea>
+                    </div>
+                    <div style="height:10px"></div>
+                    <div class="text-end">
+                        <input type="button" class="btn btn-success " value="Save" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
