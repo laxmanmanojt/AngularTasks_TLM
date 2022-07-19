@@ -8,13 +8,17 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   pwdVal: string = 'test';
+  usernameVal: string = 'test';
   constructor(private route:Router) { }
 
   ngOnInit(): void {
   }
 
   funNavigatetoNotes(){
-    this.route.navigateByUrl('/notes');
+    // We can use routeguard canActivate also for authentication... 
+    if(this.pwdVal==='test' && this.usernameVal === 'test'){
+      this.route.navigateByUrl('/notes');
+    }
   }
 
 }
